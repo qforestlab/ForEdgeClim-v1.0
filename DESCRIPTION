@@ -1,6 +1,6 @@
 Package: ForEdgeClim
 Title: Microclimate modelling from forest core to edge
-Version: 0.0.0.9000
+Version: 1.0.0
 Authors@R: 
     person("Emma", "Van de Walle", , "emmavdw@hotmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000 0002 3365 1788"))

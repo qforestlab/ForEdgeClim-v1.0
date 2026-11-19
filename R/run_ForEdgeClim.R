@@ -165,7 +165,14 @@ run_foredgeclim <- function(structure_grid, datetime, trace_idx = NULL) {
     #############################
 
     dt = 1 # diffusion step is 1, ie, the iteration step taken for temp convergence
-    T_air_vec = T_air_vec - calculate_D(T_air_vec,micro_grid$T_ground)*dt/(Cp*V*rho)
+    T_air_vec <- T_air_vec -
+      calculate_D(
+        temp_air = T_air_vec,
+        temp_soil = micro_grid$T_ground,
+        x_coords = micro_grid$x,
+        y_coords = micro_grid$y,
+        z_coords = micro_grid$z
+      ) * dt / (Cp * V * rho)
 
 
     ######################
